@@ -2,7 +2,7 @@ package lab2;
 
 import javax.swing.JOptionPane;
 
-public class AdvancedJavaCourse implements ProgrammingClass {
+public final class AdvancedJavaCourse implements ProgrammingClass {
 
     private String courseName;
     private String courseNumber;
@@ -25,7 +25,7 @@ public class AdvancedJavaCourse implements ProgrammingClass {
                     "Error: prerequisites cannot be null of empty string");
             System.exit(0);
         }
-        this.setPrerequisites(prerequisites);
+        this.prerequisites = prerequisites;
     }
 
     @Override
@@ -35,35 +35,35 @@ public class AdvancedJavaCourse implements ProgrammingClass {
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits = credits;
     }
 
     @Override
     public String getCourseName() {
-        return this.getCourseName();
+        return courseName;
     }
 
     @Override
     public String getCourseNumber() {
-        return this.getCourseNumber();
+        return courseNumber;
     }
 
     @Override
     public double getCredits() {
-        return this.getCredits();
+        return credits;
     }
 
     @Override
     public String getPrerequisites() {
-        return this.getPrerequisites();
+        return prerequisites;
     }
 
     public void setCourseName(String courseName) {
-
+        this.courseName = courseName;
     }
 
     public void setCourseNumber(String courseNumber) {
-
+        this.courseNumber = courseNumber;
     }
 
 }

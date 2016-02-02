@@ -19,39 +19,39 @@ public class IntroJavaCourse implements ProgrammingClass {
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits = credits;
     }
 
     @Override
     public String getCourseName() {
-        return this.getCourseName();
+        return courseName;
     }
 
     @Override
     public String getCourseNumber() {
-        return this.getCourseNumber();
+        return courseNumber;
     }
 
     @Override
     public double getCredits() {
-        return this.getCredits();
+        return credits;
     }
 
     @Override
     public String getPrerequisites() {
-        return this.getPrerequisites();
+        return prerequisites;
     }
 
     public void setCourseName(String courseName) {
-
+        this.courseName = courseName;
     }
 
     public void setCourseNumber(String courseNumber) {
-
+        this.courseNumber = courseNumber;
     }
 
     public void setPrerequisites(String prerequisites) {
-
+        this.prerequisites = prerequisites;
     }
 
 }

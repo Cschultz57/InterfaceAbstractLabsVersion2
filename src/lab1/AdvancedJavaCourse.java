@@ -2,9 +2,12 @@ package lab1;
 
 import javax.swing.JOptionPane;
 
+public final class AdvancedJavaCourse extends ProgrammingClass {
 
-public class AdvancedJavaCourse extends ProgrammingClass{
-    
+    private String courseName;
+    private String courseNumber;
+    private String prerequisites;
+    private double credits;
 
     public AdvancedJavaCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
@@ -15,49 +18,54 @@ public class AdvancedJavaCourse extends ProgrammingClass{
         return this.getCourseName().toUpperCase();
     }
 
-
-    
-
     @Override
     public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
+        if (prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: prerequisites cannot be null of empty string");
             System.exit(0);
         }
-        this.setPrerequisites(prerequisites);
+        this.prerequisites = prerequisites;
     }
 
     @Override
     public void setCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
+        if (credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits = credits;
     }
 
     @Override
     public String getCourseName() {
-        return this.getCourseName();
+        return courseName;
     }
 
     @Override
     public String getCourseNumber() {
-        return this.getCourseNumber();
+        return courseNumber;
     }
 
     @Override
     public double getCredits() {
-        return this.getCredits();
+        return credits;
     }
 
     @Override
     public String getPrerequisites() {
-       return this.getPrerequisites();
+        return prerequisites;
     }
 
-   
-    
+    @Override
+    public void setCourseNumber(String courseNumber) {
+        this.courseNumber = courseNumber;
+    }
+
+    @Override
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
 }

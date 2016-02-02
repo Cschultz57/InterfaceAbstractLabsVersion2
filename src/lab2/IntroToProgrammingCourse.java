@@ -21,7 +21,7 @@ public class IntroToProgrammingCourse implements ProgrammingClass {
                     "Error: courseNumber cannot be null of empty string");
             System.exit(0);
         }
-        this.setCourseNumber(courseNumber);
+        this.courseNumber=courseNumber;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class IntroToProgrammingCourse implements ProgrammingClass {
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits=credits;
     }
 
     @Override
@@ -41,27 +41,27 @@ public class IntroToProgrammingCourse implements ProgrammingClass {
                     "Error: courseName cannot be null of empty string");
             System.exit(0);
         }
-        this.setCourseName(courseName);
+        this.courseName=courseName;
     }
 
     @Override
     public String getCourseName() {
-        return this.getCourseName();
+        return courseName;
     }
 
     @Override
     public String getCourseNumber() {
-        return this.getCourseName();
+        return courseName;
     }
 
     @Override
     public double getCredits() {
-        return this.getCredits();
+        return credits;
     }
 
     @Override
     public String getPrerequisites() {
-        return this.prerequisites;
+        return prerequisites;
     }
 
     public void setPrerequisites(String prerequisites) {
